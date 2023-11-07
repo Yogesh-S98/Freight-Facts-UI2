@@ -1,4 +1,77 @@
-<div>
-    <app-input-text></app-input-text>
-    <button (click)="login()">Login</button>
-</div>
+<div class="grid">
+    <div class="col-6 col-padding login-bg-left">
+      <div class="login-bg-left">
+        <img height="600" src="../../../../../assets/images/logos/login-gif.gif"/> 
+     </div>
+  </div>
+    <div class="col-6 col-padding login-bg-img">
+    <div class="login-bg-img">
+      <div class="login-container-inner">
+        <div class="login-content">
+          <div>
+            <div class="login-header">
+              <h1 class="text-center">
+                <!-- <img src="../../../../../assets/images/logos/loginPageLogo.png" alt="" class="dpeLogo"/> -->
+                FREIGHT FACTS
+              </h1>
+            </div>
+            <div class="login-content-body">
+              <div class="heading-text">
+                <div class="Loginto">LOGIN</div>
+              </div>
+              <div class="input-w-full inputAccessorials">
+                <div class="username-block">
+                  <app-input-text
+                    [className]="'input_text_component'"
+                    name="username"
+                    [maxlength]="60"
+                    [label]="'Email ID'"
+                    [requiredStar]="true"
+                    [formGroup]="userForm"
+                    [placeholder]="'Enter your email id'"
+                    [type]="'text'"
+                    [error]="
+                      inputValidationsErrors(userForm, 'username')
+                        ? 'Email or username is required.'
+                        : ''
+                    "
+                  ></app-input-text>
+                </div>
+              </div>
+  
+              <div class="input-w-full inputAccessorials">
+                <app-password
+                  [className]="'input_text_component'"
+                  [toggleMask]="true"
+                  [formGroup]="userForm"
+                  [name]="'password'"
+                  [placeholder]="'Enter your password'"
+                  [label]="'Password'"
+                  [requiredStar]="true"
+                  [error]="
+                    inputValidationsErrors(userForm, 'password')
+                      ? 'required'
+                      : ''
+                  "
+                >
+                </app-password>
+              </div>
+              <div class="flex justify-content-center">
+                <app-button
+                  [type]="'button'"
+                  [mainClass]="'btn-login'"
+                  [label]="'Login'"
+                  [showIcon]="false"
+                  [disabled]="userForm.invalid"
+                  (submitForm)="login()"
+                  [ifHasError]="hasError"
+                ></app-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  </div>

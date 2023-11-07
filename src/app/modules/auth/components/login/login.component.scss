@@ -1,0 +1,148 @@
+@import "../../../../../colors.scss";
+
+.login-content {
+  background-image: url(../../../../../assets/images/logos/login-transparent.png);
+  background-size: cover;
+  margin: auto;
+  padding: 20px 5px 20px 5px;
+  width:495px;
+  height: 495px;
+  border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  .login-content {
+    left: 5%;
+
+  }
+}
+
+.login-header h2 {
+  color: $secondaryColor;
+  text-align: center;
+}
+.login-content-body {
+  padding: 0px 30px 0px 30px;
+
+}
+.username-block {
+  margin-bottom: 3px;
+}
+
+.errormeaasge {
+  color: red;
+  font-size: 15px;
+}
+.bg-image-main {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+  object-fit: fill;
+}
+.bg-image{
+  width: 50%;
+  max-width: 50%;
+}
+.dpeLogo{
+  height: 20px;
+}
+.heading-text {
+  text-align: center;
+  color: $primaryColor;
+  font: normal 700 20px $font-family;
+}
+
+// .tot-container {
+//   background-color: $secondaryColor;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 0px;
+// }
+.tot-container{
+  background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 100px;
+    overflow: hidden;
+    
+}
+.login-container{
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 2px 2px 8px 2px rgba(2, 2, 70, 0.06);
+}
+@media (max-width: 576px) {
+  .tot-container {
+    gap: 0px;
+  }
+}
+@media (max-width: 390px) {
+  .tot-container {
+    overflow-x: scroll;
+  }
+  .dpeLogo{
+    height: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .tot-container {
+    gap: 20px;
+  }
+}
+.Loginto {
+  padding-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 724px) {
+  .bg-image-main {
+    display: none;
+  }
+ 
+}
+::ng-deep {
+  .inputAccessorials {
+    .p-input-icon-right {
+      max-width: 100% !important;
+    }
+  }
+}
+.login-bg-img{
+  background-image: url("../../../../../assets/images/logos/login-bg.png");
+  background-size: cover;
+  padding:140px 0px 140px 0px;
+  height: 100vh;
+}
+.login-bg-left{
+  padding-top: 50px;
+  background-color: #f7f6f9;
+  display: flex;
+  justify-content: center;
+}
+ .button-primary {
+background-color: #ffffff!important;
+}
+.input_button_component .button-primary .p-button {
+  background-color: #ffffff!important;
+}
+.col-padding{
+  padding: 0px!important;
+}
+.input_text_component .p-inputtext {
+  padding: 0.5rem 0.5rem;
+  height: 38.4px;
+  border-color: #fff!important;
+  background-color: transparent!important; 
+}
+.btn-login {
+  color: $fontBlackColor!important;
+  background:$whiteColor!important;
+}

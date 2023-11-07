@@ -140,7 +140,7 @@ export class TokenInterceptor implements HttpInterceptor {
     return this.refreshTokenSubject.pipe(
       filter((token) => token !== null),
       take(1),
-      switchMap((token) => next.handle(this.addTokenHeader(request, token)))
+      switchMap((token: any) => next.handle(this.addTokenHeader(request, token)))
     );
   }
 

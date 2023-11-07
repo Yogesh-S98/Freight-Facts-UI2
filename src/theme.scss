@@ -1,0 +1,229 @@
+@import "./colors.scss";
+
+// common input styles
+.input_text_component .p-input-icon-left > .p-inputtext {
+    padding-left: 3rem !important;
+  }
+
+  .input_text_component .p-inputtext {
+    border-radius: 3px;
+    border: $searchInputBorder;
+    background: $secondaryColor;
+    width: 600px !important;
+    max-width: 366px !important;
+    height: 40px;
+  }
+  .input_text_component .p-inputtext:enabled:hover {
+    border-color: $searchInputBorderColorHover !important;
+  }
+.p-input-filled .p-multiselect {
+    background: $secondaryColor !important;
+  }
+.p-inputtext {
+    background-color: $secondaryColor !important;
+    font-family: $font-family;
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 24px;
+    color: $inputTextColor !important;
+    width: inherit;
+    max-width: 280px !important;
+    height: 36.4px;
+    padding: 0.65rem;
+    border: 1px solid $inputBorderColor;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+      box-shadow 0.2s !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 3px !important;
+  }
+  .p-inputtext:enabled:hover {
+    border-color: $inputBorderColor !important;
+  }
+  
+  .p-inputtext:enabled:focus {
+    box-shadow: none !important;
+    border-color: $inputBorderColor !important;
+  }
+
+// common button styles
+.p-button:focus {
+    box-shadow: none;
+    color: $fontColor;
+  }
+  
+  .p-button {
+    color: $fontColor;
+  }
+  .p-button:enabled:hover,
+.p-button:enabled:active {
+  color: $fontColor;
+  background: $secondaryColor;
+  border-color: $inputBorderColor;
+}
+.btn-login{
+    .p-button {
+      padding: 0.5rem 1.5rem;
+      color: $fontBlackColorFF;
+      background-color: $whiteColor;
+      border: none;
+      border-radius: 25px;
+      width: 124px;
+      height: 42px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+    }
+    .p-button:hover{
+      color: $fontBlackColorFF;
+      background: $whiteColor;
+    }
+}
+.input_button_component {
+    .button-download {
+      .p-button {
+        padding: 0.5rem 1rem !important;
+      }
+    }
+    .button-primary {
+      margin: 0rem 0.5rem 0rem 0.3rem;
+  
+      .p-button {
+        padding: 0.5rem 1.5rem;
+        color: $primaryButtonFontColor;
+        background: $primaryButtonColor1;
+        border: none;
+        border-radius: 25px;
+        width: 124px;
+        height: 42px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+      }
+  
+      .p-button:enabled:hover,
+      .p-button:enabled:active {
+        color: $primaryButtonFontColor;
+        background: $primaryButtonColor1;
+        border: none;
+      }
+  
+      .p-button:focus {
+        box-shadow: none;
+      }
+      @media (max-width: 1350px) {
+        .p-button {
+          color: $primaryButtonFontColor;
+          background: $primaryButtonColor1;
+          border: none;
+        }
+      }
+    }
+  
+    .button-secondary {
+      margin: 0px 5px;
+      .p-button {
+        padding: 0.5rem 1.5rem;
+        color: $secondaryButtonFontColor;
+        background: $secoundaryButtonColor;
+        border: none;
+        border-radius: 25px;
+        width: 124px;
+        height: 42px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+      }
+  
+      .p-button:enabled:hover,
+      .p-button:enabled:active {
+        color: $secondaryButtonFontColor;
+        background: $secoundaryButtonColor;
+        border: none;
+      }
+  
+      .p-button:focus {
+        box-shadow: none;
+      }
+      @media (max-width: 1350px) {
+        .p-button {
+          color: $secondaryButtonFontColor;
+          background: $secoundaryButtonColor;
+          border: none;
+        }
+      }
+    }
+    .button-delete {
+      margin: 0px 5px;
+      .p-button {
+        padding: 0.5rem 1.5rem;
+        color: $secondaryColor;
+        background: $deleteButtonColor;
+        border: none;
+        border-radius: 25px;
+        width: 124px;
+        height: 42px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+      }
+  
+      .p-button:enabled:hover,
+      .p-button:enabled:active {
+        color: $secondaryColor;
+        background: $deleteButtonColor;
+        border: none;
+      }
+  
+      .p-button:focus {
+        box-shadow: none;
+      }
+      @media (max-width: 1350px) {
+        .p-button {
+          color: $secondaryColor;
+          background: $deleteButtonColor;
+          border: none;
+        }
+      }
+    }
+    .button-cancel {
+      margin: 0px 5px;
+      margin-right: 10px;
+      .p-button {
+        padding: 0.5rem 0px;
+        color: $deleteButtonColor;
+        background: $secondaryColor;
+        border: none !important;
+        width: 100%;
+        height: 42px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+      }
+  
+      .p-button:enabled:hover,
+      .p-button:enabled:active {
+        color: $deleteButtonColor;
+        background: $secondaryColor;
+        border: none;
+        text-decoration: underline;
+      }
+  
+      .p-button:focus {
+        box-shadow: none;
+      }
+      @media (max-width: 1350px) {
+        .p-button {
+          color: $deleteButtonColor;
+          background: $secondaryColor;
+          border: none;
+        }
+      }
+    }
+  }

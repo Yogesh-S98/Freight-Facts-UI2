@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from './components/components.module';
 import { PrimeUiModule } from './primeUi/prime-ui.module';
-import { NullPipe } from './pipes/nullpipe/null.pipe';
-import { TruefalsePipe } from './pipes/trueFalse/truefalse.pipe';
+// import { NullPipe } from './pipes/nullpipe/null.pipe';
+// import { TruefalsePipe } from './pipes/trueFalse/truefalse.pipe';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [NullPipe, TruefalsePipe],
+//   declarations: [NullPipe, TruefalsePipe],
   imports: [
     CommonModule,
     ToastrModule.forRoot({
@@ -21,6 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     }),
     HttpClientModule,
   ],
-  exports: [PrimeUiModule, ComponentsModule, TruefalsePipe, NullPipe],
+  exports: [PrimeUiModule, ComponentsModule],
 })
 export class SharedModule {}
