@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../src/theme.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0px !important;
     overflow-x: hidden;
 }

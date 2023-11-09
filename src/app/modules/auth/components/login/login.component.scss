@@ -90,6 +90,14 @@
     height: 18px;
   }
 }
+@media (min-width: 1600px) and (max-width: 2060px) {
+  .login-bg-img {
+    padding: 200px !important;
+  }
+  .login-bg-left {
+    padding-top: 130px !important;
+  }
+}
 @media (max-width: 900px) {
   .tot-container {
     gap: 20px;
@@ -118,13 +126,13 @@
 .login-bg-img{
   background-image: url("../../../../../assets/images/logos/login-bg.png");
   background-size: cover;
-  padding:140px 0px 140px 0px;
-  height: 100vh;
+  padding: 121px;
 }
 .login-bg-left{
   padding-top: 50px;
   background-color: #f7f6f9;
   display: flex;
+  height: 100vh;
   justify-content: center;
 }
  .button-primary {
@@ -137,8 +145,9 @@ background-color: #ffffff!important;
   padding: 0px!important;
 }
 .input_text_component .p-inputtext {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   height: 38.4px;
+  color: #fff !important;
   border-color: #fff!important;
   background-color: transparent!important; 
 }

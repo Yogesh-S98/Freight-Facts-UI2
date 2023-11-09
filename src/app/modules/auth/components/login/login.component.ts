@@ -90,7 +90,8 @@ export class LoginComponent {
         if (appRoleName === 'User' && organizations.length === 0) {
           this.router.navigateByUrl('/unauthorized');
         } else {
-          this.router.navigateByUrl('/RE/organizations');
+          console.log('successfully');
+          this.router.navigateByUrl('/user/dashboard');
         }
 
         this.toaster.success(`${res.message}`, '');

@@ -1,0 +1,35 @@
+<div class="header">
+    <div class="header-user headerContainer">
+      <div class="headerText">
+        <img class="logo" *ngIf="!accessNavBar" src="assets/images/logos/FreightFacts BlackLogo.jpg" alt="" />
+      </div>
+      <div class="flex justify-content-center profileAdjustment" *ngIf="accessNavBar">
+        <div class="nav-username mt-2">
+          <p-avatar
+            label="{{ name.charAt(0) }}"
+            shape="circle"
+            size="large"
+          ></p-avatar>
+        </div>
+        <span (click)="op.toggle($event)" class="logoutIcon"
+          ><i class="pi pi-angle-down navOptions"></i>
+          <p-overlayPanel
+            #op
+            styleClass="pOverlay"
+            [style]="{ width: 'fit-content' }"
+          >
+            <ng-template pTemplate="content">
+              <div class="memberEdit p-grid">
+                <span
+                  class="dropdown-nav p-col-12"
+                  style="white-space: nowrap"
+                  (click)="logOut()"
+                  ><i class="pi pi-sign-out logOut"></i>&nbsp;Logout</span
+                >
+              </div>
+            </ng-template>
+          </p-overlayPanel>
+        </span>
+      </div>
+    </div>
+  </div>

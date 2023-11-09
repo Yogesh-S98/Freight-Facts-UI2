@@ -1,0 +1,43 @@
+<p-table [columns]="columns" [value]="records">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{ col.header }}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex">
+        <tr>
+            <ng-container *ngFor="let col of columns">
+                <td *ngIf="col.type !== 'actions'; else actionColumn">
+                    {{ rowData[col.field] }}
+                </td>
+                <ng-template #actionColumn>
+                    <td>
+                      <div>
+                        <span
+                          *ngFor="let action of col.actions"
+                          class="listing-action-button cursor-pointer"
+                        >
+                          <span *ngIf="actionData(rowData, action) as actionInfo">
+                            <i
+                              *ngIf="actionInfo"
+                              class="{{ actionInfo.icon }}"
+                              [ngClass]="
+                                actionInfo.icon === 'pi pi-trash'
+                                  ? 'delete-icon-style'
+                                  : 'edit-icon-style'
+                              "
+                              (click)="actionClick(actionInfo.type, rowData)"
+                            ></i>
+                            &nbsp;
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                  </ng-template>
+            </ng-container>
+        </tr>
+    </ng-template>
+</p-table>
+

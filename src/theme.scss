@@ -1,12 +1,45 @@
 @import "./colors.scss";
 
+// side-nav bar styles
+.sidenav-cont {
+  .pi {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .p-sidebar {
+    background-color: $sideBackgroundColor !important;
+    width: $rateDashboardSideBarWidth;
+    min-width: $rateDashboardSideBarWidth;
+    max-width: 300px;
+    z-index: $sidebarZIndex;
+    box-shadow: 8px 8px 24px 0px rgba(2, 2, 70, 0.03);
+    height: 100vh;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .p-sidebar .p-sidebar-content {
+    padding: 2px;
+    overflow-y: visible !important;
+  }
+  .p-sidebar .p-sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .p-sidebar .p-sidebar-footer {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}
 // common input styles
 .input_text_component .p-input-icon-left > .p-inputtext {
     padding-left: 3rem !important;
   }
 
   .input_text_component .p-inputtext {
-    border-radius: 3px;
     border: $searchInputBorder;
     background: $secondaryColor;
     width: 600px !important;
@@ -19,13 +52,15 @@
 .p-input-filled .p-multiselect {
     background: $secondaryColor !important;
   }
+::-webkit-input-placeholder {
+  color: rgb(61, 60, 60) !important;
+}
 .p-inputtext {
     background-color: $secondaryColor !important;
-    font-family: $font-family;
     font-size: 16px !important;
     font-weight: 400;
     line-height: 24px;
-    color: $inputTextColor !important;
+    color: white !important;
     width: inherit;
     max-width: 280px !important;
     height: 36.4px;
@@ -36,7 +71,7 @@
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
-    border-radius: 3px !important;
+    border-radius: 0px !important;
   }
   .p-inputtext:enabled:hover {
     border-color: $inputBorderColor !important;

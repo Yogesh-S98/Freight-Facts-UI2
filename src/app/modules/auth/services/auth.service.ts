@@ -31,4 +31,7 @@ export class AuthService {
       data
     );
   }
+  setPropertyValuesToCSSVariables(cssClassName, valueAssigned) {
+    document.documentElement.style.setProperty(cssClassName, valueAssigned);
+  }
 }
