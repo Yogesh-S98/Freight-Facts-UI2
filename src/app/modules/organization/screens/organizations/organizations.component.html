@@ -1,4 +1,13 @@
-<div>
+<div class="organization-container">
+    <div class="organization-header">
+        <div class="organization-title">
+            Organization List
+        </div>
+        <!-- <div class="flex justify-content-between">
+            <div class="justify-content-start">Search</div>
+            <div class="justify-content-end">add organization</div>
+        </div> -->
+    </div>
     <app-table
     [config]="tableConfig"
     (actionHappens)="actionFromTable($event)"
